@@ -51,6 +51,12 @@ cd 06_脚本
 python anti_ai_checker.py ../03_正文/卷二_红云与黑龙/
 ```
 
+### POV验证
+```bash
+cd 06_脚本
+python pov_validator.py ../03_正文/卷一_裂痕与回响/第05章_孤独狼嗥.md
+```
+
 ### 查看进度
 ```bash
 cd 06_脚本
