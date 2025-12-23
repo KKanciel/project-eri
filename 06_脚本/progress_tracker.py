@@ -47,11 +47,11 @@ def count_chapters(volume_dir: str) -> tuple:
 def get_volume_status(chapter_count: int, expected: int = None) -> str:
     """获取卷的完成状态"""
     if expected and chapter_count >= expected:
-        return "✅"
+        return "[DONE]"
     elif chapter_count > 0:
-        return "🔄"
+        return "[WIP]"
     else:
-        return "⏳"
+        return "[TODO]"
 
 
 def generate_report(base_dir: str):
@@ -67,7 +67,7 @@ def generate_report(base_dir: str):
 
     # 各卷目录
     volumes = [
-        ("卷一", "03_正文/卷一_裂痕与回响", 19),  # 预期19章
+        ("卷一", "03_正文/卷一_裂痕与回响", 21),  # 含序章和卷末闲聊
         ("卷二", "03_正文/卷二_红云与黑龙", None),
         ("卷三", "03_正文/卷三_希望与失控", None),
         ("卷四", "03_正文/卷四_献祭与黎明", None),
@@ -102,7 +102,7 @@ def generate_report(base_dir: str):
     # 进度条
     bar_length = 40
     filled = int(bar_length * min(completion, 100) / 100)
-    bar = "█" * filled + "░" * (bar_length - filled)
+    bar = "#" * filled + "-" * (bar_length - filled)
     print(f"\n[{bar}] {completion:.1f}%")
 
     print("\n" + "=" * 60)
