@@ -1,0 +1,28 @@
+# 草稿文件（不跟踪临时草稿）
+05_草稿/当前草稿.md
+
+# 输出文件（可重新生成）
+07_输出/
+
+# 备份和压缩文件
+*.zip
+*.bak
+*.backup
+
+# Python缓存
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# 编辑器临时文件
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,29 @@
+# 脚本配置文件
+
+# 项目路径
+project:
+  name: "龙珠：厄日序曲"
+  base_dir: ".."
+  正文目录: "03_正文"
+  简报目录: "04_创作简报"
+
+# 目标字数
+targets:
+  min_words: 350000
+  max_words: 450000
+
+# 各卷预期章节数
+volumes:
+  卷一: 19
+  卷二: ~
+  卷三: ~
+  卷四: ~
+
+# 反AI味检测配置
+anti_ai:
+  # 严格模式：所有匹配都报告
+  strict_mode: false
+  # 忽略的文件模式
+  ignore_patterns:
+    - "_*.md"  # 忽略大纲文件
+    - "*.bak"
